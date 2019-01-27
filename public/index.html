@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chat App using WebSockets</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <script src="socket.io-client/dist/socket.io.js"></script>
+</head>
+<body>
+
+<div id="mario-chat">
+    <!--<h3>sdfsadf</h3>-->
+    <label>Web Socket Based Chat App</label>
+    <div id="chat-window">
+        <div id="output"></div>
+        <div id="feedback"></div>
+    </div>
+    <input id="handle" type="text" placeholder="User"/>
+    <input id="message" type="text" placeholder="Message"/>
+    <button id="send">Send</button>
+</div>
+
+<script src="utils/chat.js"></script>
+</body>
+</html>
