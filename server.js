@@ -3,12 +3,12 @@ var bodyParser = require('body-parser');
 var socket = require('socket.io');
 var ip = require('ip');
 var app = express();
-
+var port = process.env.PORT || 5000;
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-var server = app.listen(3500, function () {
+var server = app.listen(port, function () {
    console.log("Listening to http://%s:%s", ip.address(), server.address().port);
 });
 
