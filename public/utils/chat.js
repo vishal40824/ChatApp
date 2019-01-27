@@ -1,6 +1,4 @@
 var socket = io.connect(window.location.hostname);
-// console.log("Hostname: " + window.location.hostname);
-// console.log("Host: " + window.location.host);
 
 var message = document.getElementById('message'),
     handle = document.getElementById('handle'),
@@ -8,6 +6,7 @@ var message = document.getElementById('message'),
     output = document.getElementById('output'),
     feedback = document.getElementById('feedback'),
     chatWin = document.getElementById('chat-window');
+
 //Listen to the event from the message field and provide an action
 btn.addEventListener('click', function () {
    socket.emit('chat',{
@@ -31,7 +30,6 @@ message.addEventListener('keyup', function () {
        handler:handle.value,
        scrollVal:output.clientHeight
    });
-   // console.log(output.clientHeight);
 });
 
 //Catch the emitted event from the server
